@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTTP Request Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <button onclick="getUserData()">Get User Data</button>
+
+  <script>
+    function getUserData() {
+      axios.get('http://localhost:3000/home')
+        .then(response => {
+          // Handle the response data
+          console.log(response.data);
+        })
+        .catch(error => {
+          // Handle any errors
+          console.error('Error:', error);
+        });
+    }
+  </script>
+</body>
+</html>
